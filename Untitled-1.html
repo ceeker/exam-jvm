@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<form novalidate="false">
+	<input type="text" pattern="[0-9]{6}" title="输入6位有效的邮政编码"/>
+    <input type="text" required="required"/>
+    <keygen name="password"/>
+    <input type="submit" value="提交"/>
+    
+	<input type="text" id="city" list="cityList"/>
+	<datalist style="display:none" id="cityList">
+    
+    	<option value="*@qq.com">北京</option>
+        <option value="shanghai">上海</option>
+        <option value="guangzhou">广州</option>
+        <option value="shenzhen">深圳</option>
+    </datalist>
+    <canvas  width="200" height="200" id="myc">您的浏览器不支持canvas</canvas>
+</form>
+<script type="text/javascript">
+	var c=document.getElementById("myc");
+	var context=c.getContext("2d");
+	context.fillStyle="red";
+	context.fillRect(0,0,200,200);
+	context.moveTo(0,0);
+	context.lineTo(300,300);
+	context.stroke();
+	if(c.getContext){
+			alert("支持canvas");
+		}else{
+			alert("不支持canvas");
+		}
+
+
+</script>
+
+</body>
+</html>
